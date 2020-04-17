@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formation Leaflet</title>
+    <link rel="icon" type="image/png" href="./images/logoShort2.png">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Font-awesome-->
+    <link href="./vendor/fontawesome-free-5.12.1-web/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="topbar">
+        <img src="./images/cdg_black.png" alt="Logo CDG" class="logo-topbar">
+    </div>
+    <div id="main-container">
+        <div>
+            <div class="open-sidebar-left opener">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div id="sidebar-left">
+                <div class="closer">
+                    <i class="fas fa-times "></i>
+                </div>
+                <div>
+                    <div class="sidebar-header">
+                        <h2 class="title-sidebar-header">Trouver une adresse</h2>
+                    </div>
+                    <div class="sidebar-body">
+                        <label class="sidebar-label">Chercher une adresse</label>
+                        <input type="text" class="sidebar-input" id="search-location" placeholder="Chercher">
+                        <button class="btn-oulined-blue mt-10px" id="button-search-location">Recherché</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="sidebar-header">
+                        <h2 class="title-sidebar-header">Choisir la carte de fond</h2>
+                    </div>
+                    <div class="sidebar-body">
+                        <div id="basemaps-container">
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sidebar-header">
+                        <h2 class="title-sidebar-header">Sélectionner des couches</h2>
+                    </div>
+                    <div class="sidebar-body">
+                        <div id="layer-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+
+        </div>
+        <div>
+            <div class="open-sidebar-right opener">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div id="sidebar-right">
+                <div class="closer">
+                    <i class="fas fa-times "></i>
+                </div>
+                <div>
+                    <div class="sidebar-header">
+                        <h2 class="title-sidebar-header">Information</h2>
+                    </div>
+                    <div class="sidebar-body">
+                        <div id="sidebar-right-content">
+                            Aucune donnée sélectionnée
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="loader-container">
+        <div id="loader">
+            <div class="spinner">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="./vendor/leaflet/leaflet.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/geocoder.js"></script>
+    <script src="./js/geolocator.js"></script>
+    <script src="./js/basemaps.js"></script>
+    <script src="./js/layers.js"></script>
+</body>
+
+</html>

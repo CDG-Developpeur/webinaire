@@ -1,0 +1,306 @@
+body{
+    margin:0;
+}
+#topbar{
+    height:80px;
+    background-color:#DCDCDC;
+    width:100%;
+   
+}
+#main-container{
+    position:relative;
+    height: 100vh;
+}
+#sidebar-left{
+    position: absolute;
+    height:100%;
+    width:20%;
+    background-color:rgba(245, 245, 245, 0.8);
+    z-index:1000;
+    top:0;
+    left:0;
+    overflow-y:scroll;
+}
+.open-sidebar-left{
+    display: none;
+    position:absolute;
+    background-color:rgba(70,180,169,1);
+    padding:15px;
+    color:#DCDCDC;
+    top:15px;
+    left:0;
+    z-index:2000;
+}
+.open-sidebar-right{
+    position:absolute;
+    background-color:rgba(70,180,169,1);
+    padding:15px;
+    color:#DCDCDC;
+    top:70px;
+    right:0;
+    z-index:2000;
+    
+}
+#map{
+    height:100%;
+    width:100%;
+}
+#sidebar-right{
+    position: absolute;
+    right:0;
+    top:0;
+    height:100%;
+    width:20%;
+    background-color:rgba(245, 245, 245, 0.8);
+    z-index:1000;
+    display:none;
+    overflow-y:scroll;
+}
+.sidebar-header{
+    background-color:#DCDCDC;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-bottom:1px solid #F5F5F5;
+}
+.sidebar-body{
+    padding-top:30px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:30px;
+}
+.closer{
+    background-color:#DCDCDC;
+    float:right;
+    padding-right:10px;
+    color:#404040;
+}
+.closer>i{
+    cursor: pointer;
+}
+/*Titre et text*/
+.title-sidebar-header{
+    margin-top:0;
+    margin-bottom:0;
+    color:#404040;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    font-weight:600;
+    font-size:18px;
+    cursor: pointer;
+}
+/*images*/
+.logo-topbar{
+    height: 70%;
+    margin-top:5px;
+}
+/*Form*/
+.sidebar-label{
+    font-family: 'Montserrat', sans-serif;
+    color:#404040;
+    font-size:15px;
+    font-weight:600;
+}
+.sidebar-input{
+    width:100%;
+    border:none;
+    padding-left:5px;
+    padding-top:15px;
+    padding-bottom:15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(220,220,220,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(220,220,220,1);
+    box-shadow: 10px 10px 5px 0px rgba(220,220,220,1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top:5px;
+}
+.btn-oulined-blue{
+    background-color:rgba(0,0,0,0);
+    border:1px solid rgba(70,180,169,1);
+    color:rgba(70,180,169,1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:20px;
+}
+.btn-oulined-blue:hover{
+    background-color:rgba(70,180,169,1);
+    color:rgba(245, 245, 245, 0.8);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+/*Custom radio button*/
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: white;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: rgba(70,180,169,1);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+/*Custom checkbox*/
+/* Customize the label (the container) */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-checkbox:hover input ~ .checkmark-checkbox {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-checkbox input:checked ~ .checkmark-checkbox {
+    background-color: rgba(70,180,169,1);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-checkbox input:checked ~ .checkmark-checkbox:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-checkbox .checkmark-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+/*Marge et padding*/
+.mt-10px{
+    margin-top:10px;
+}
+.loader-container{
+    display: none
+}
+#loader{
+    top:0;
+    left:0;
+    position:fixed;
+    background-color:rgba(0,0,0,0.5);
+    width:100vw;
+    height:100vh;
+    z-index:5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #336699; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
