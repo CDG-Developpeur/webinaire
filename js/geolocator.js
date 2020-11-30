@@ -3,8 +3,6 @@ $(document).ready(function () {
     
 
 });
-
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
